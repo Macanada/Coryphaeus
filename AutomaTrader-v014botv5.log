@@ -1,0 +1,388 @@
+Welcome to Ubuntu 24.04.2 LTS (GNU/Linux 6.6.87.1-microsoft-standard-WSL2 x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Sat Jun 14 21:02:01 JST 2025
+
+  System load:  0.0                 Processes:             71
+  Usage of /:   0.4% of 1006.85GB   Users logged in:       0
+  Memory usage: 3%                  IPv4 address for eth0: 172.31.83.214
+  Swap usage:   0%
+
+ * Strictly confined Kubernetes makes edge and IoT secure. Learn how MicroK8s
+   just raised the bar for easy, resilient and secure K8s cluster deployment.
+
+   https://ubuntu.com/engage/secure-kubernetes-at-the-edge
+
+This message is shown once a day. To disable it please create the
+/home/sindak/.hushlogin file.
+sindak@WhiteChronus:~$ source venv/bin/activate
+(venv) sindak@WhiteChronus:~$ cd AutomaTrader-v014
+(venv) sindak@WhiteChronus:~/AutomaTrader-v014$ cd botv5
+(venv) sindak@WhiteChronus:~/AutomaTrader-v014/botv5$ python3 main.py
+atalhos, pressione as seguintes teclas na linha de input para os seguintes comandos:
+'h' help
+'b' volta para o input anterior
+'r' reinicia o config de estratégia
+'e' encerra o programa
+'enter' inseri o valor default
+
+🔹 Carregar Estratégia guardada em arquivo? (s/n):
+S
+🔹 Estratégias salvas encontradas:
+1. user/strategy/strategy_20250613_Bybit_Demo_BTC_USDT.json
+2. user/strategy/strategy_20250529_Bybit_Demo_BTC_USDT.json
+3. user/strategy/strategy_20250528_Bybit_Demo_BTC_USDT.json
+4. user/strategy/strategy_20250525_Bybit_Demo_BTC_USDT.json
+5. user/strategy/strategy_20250527_Bybit_Demo_BTC_USDT.json
+🔹 Escolha uma opção (1-5):
+1
+
+💾 Estratégia carregada de user/strategy/strategy_20250613_Bybit_Demo_BTC_USDT.json
+✅ RESUMO DA ESTRATÉGIA CARREGADA:
+• Limite de saldo: 0.0 USDT
+• Exchange: Bybit Demo
+• Par: BTC/USDT
+• Capital inicial por ordem: 5000.0 USDT
+• Recompra: mín 500.0, máx 6000.0 USDT, multiplicador: 1.03
+• Lucro alvo: 0.50%, mín 0.20%, máx 2.00%, multiplicador: 0.97
+• Recompra a cada queda de: 0.25%, mín 0.10%, máx 1.00%, multiplicador: 1.0
+• Máximo de recompras: 20
+• Taxa de corretagem: 0.10%
+• Reaplicação de lucro: Sim, distribuído em 2 ordens
+💰 Saldo necessário para esta estratégia: 122434.62 USDT
+[2025-06-14 21:02:49] ⏰ Offset de tempo ajustado: 0.208 segundos
+
+✅ Conexão com chaves API bem sucedida!
+🔹 Ação desejada:
+1. Selecionar outra estratégia
+2. Executar a estratégia
+3. Editar a estratégia
+4. Criar nova estratégia
+5. Sair do programa
+🔹 Escolha uma opção (1-5):
+2
+
+🚀 Iniciando operação com a estratégia carregada!
+
+
+==================================================
+🚀 Iniciando nova execução em 2025-06-14 21:03:13
+==================================================
+
+
+💹 Taxa de transação configurada: 0.100%
+📈 Limite de saldo para operações configurado: 0.00 USDT (saldo total)
+💸 Configuração de reaplicação de lucro: Ativada, Ordens de distribuição: 2
+💾 Configuração de salvamento da estratégia: Ativada
+💾 Estratégia salva com sucesso em main_strategy.json
+[2025-06-14 21:03:13] 🔍 Iniciando estratégia de trading...
+
+[2025-06-14 21:03:13] ⏰ Offset de tempo ajustado: 0.145 segundos
+
+[2025-06-14 21:03:14] ⚡ Connecting to WebSocket: wss://stream-demo.bybit.com/v5/private
+🔑 WebSocket authentication successful.
+📡 WebSocket subscription successful.
+[2025-06-14 21:03:15] ⏰ Offset de tempo ajustado: 0.144 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.33359047
+USDT: 13922.48
+
+[2025-06-14 21:03:15] 🔄 Iniciando novo ciclo principal #1
+
+[2025-06-14 21:03:15] 🛒 Iniciando o processo da ordem de compra inicial...
+
+🔄 Calculando qty para compra inicial: base 5000.00 USDT, calculado 5000.00 USDT, final 5000.00 USDT (min: 500.0, max: 6000.0)
+🛒 Enviando ordem de compra a mercado. Quantidade: 5000.00 USDT
+
+[2025-06-14 21:03:15] ✅ Ordem Buy enviada! ID: 1972720385300630784 | Qty: 5000.00 | Price: Mercado
+[2025-06-14 21:03:15] ⏳ Aguardando 8 segundos para processar a compra inicial...
+
+🫀 Iniciando KeepAlive WebSocket...
+💰 Subscrito ao wallet stream para manter conexão ativa
+
+ℹ️ Pressione 'q' para parar imediatamente, 's' para parar após a próxima venda...
+
+[2025-06-14 21:03:23] 🔍 Resposta da API para ordem 1972720385300630784 (tentativa 1):
+[2025-06-14 21:03:23] 📊 Compra inicial do ciclo #1 a 105099.90 USDT/BTC, Qty: 0.047574 BTC
+
+[2025-06-14 21:03:23] 📈 Iniciando o processo da ordem de venda...
+
+📈 Calculando ordem de venda limite: Quantidade: 0.047574 BTC, Preço: 105731 USDT/BTC, Valor: 5030.05 USDT
+[2025-06-14 21:03:23] ✅ Ordem Sell enviada! ID: 1972720455035129088 | Qty: 0.047574 | Price: 105731
+[2025-06-14 21:03:23] ⏳ Aguardando 2 segundos para processar a ordem de venda...
+
+[2025-06-14 21:03:25] 🔄 Iniciando o processo da ordem de recompra...
+
+🔄 Calculando qty para recompra: base 5000.00 USDT, calculado 5150.00 USDT, final 5149.99 USDT (min: 500.0, max: 6000.0)
+🔍 Convertendo 5149.99 USDT para 0.049124 BTC a 104837 USDT/BTC
+[2025-06-14 21:03:25] ✅ Ordem Buy enviada! ID: 1972720472533765376 | Qty: 0.049124 | Price: 104837
+[2025-06-14 21:03:25] ⏳ Aguardando 2 segundos para processar a ordem de recompra...
+
+[2025-06-14 21:03:27] 🔍 Monitoring cycle #1 with 1 buys...
+[2025-06-14 21:43:36] ✅ Ordem 1972720472533765376 preenchida
+[2025-06-14 21:43:36] 🔄 Recompra 1972720472533765376 preenchida no ciclo #1!
+[2025-06-14 21:43:36] ✅ Ordem 1972720455035129088 cancelada com sucesso!
+
+[2025-06-14 21:43:36] 🔍 Resposta da API para ordem 1972720472533765376 (tentativa 1):
+📉 Nova queda necessária para recompra: 0.25% (min: 0.10%, max: 1.00%)
+
+📈 Iniciando o processo da ordem de venda após recompra...
+
+
+📊 Resumo das compras no ciclo #1:
+   Compra 1: 0.047574 BTC (Taxa: 0.000048 BTC) a 105099.90 USDT (Taxa: 4.99 USDT, Valor: 4999.99 USDT)
+   Compra 2: 0.049124 BTC (Taxa: 0.000049 BTC) a 104837.00 USDT (Taxa: 5.15 USDT, Valor: 5150.01 USDT)
+   Total: 0.096601 BTC, 10160.16 USDT (incluindo taxas)
+   Taxa total: 10.15 USDT
+📊 Preço médio do ciclo #1: 105176.49 USDT/BTC
+🎯 Lucro alvo ajustado para o próximo ciclo: 0.48% (Min: 0.20%, Max: 2.00%)
+
+💰 Taxa de venda estimada: 10.22 USDT
+💰 Preço de venda calculado: 105792.38 USDT/BTC (Preço médio: 105176.49 + Lucro Alvo: 0.48%)
+
+📈 Calculando ordem de venda limite: Quantidade: 0.096601 BTC, Preço: 105792 USDT/BTC, Valor: 10219.61 USDT
+[2025-06-14 21:43:36] ✅ Ordem Sell enviada! ID: 1972740695253060864 | Qty: 0.096601 | Price: 105792
+[2025-06-14 21:43:36] ⏳ Aguardando 2 segundos para processar a ordem de venda...
+
+🔄 Iniciando o processo da ordem de recompra após recompra...
+
+🔄 Calculando qty para recompra: base 5000.00 USDT, calculado 5304.51 USDT, final 5304.51 USDT (min: 500.0, max: 6000.0)
+[2025-06-14 21:43:38] ⏰ Offset de tempo ajustado: 0.187 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43019156
+USDT: 3772.47
+
+🔄 Saldo insuficiente para recompra (3772.47 < 5304.51 USDT). Pausando ciclo e aguardando gatilhos...
+[2025-06-14 21:43:38] ⏰ Offset de tempo ajustado: 0.187 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43019156
+USDT: 3772.47
+
+🔄 Continuando monitoramento do ciclo #1...
+
+DEBUG: self.rebuys_max = 20, rebuy_count = 1
+
+[2025-06-14 21:43:39] ⏰ Offset de tempo ajustado: 0.185 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43019156
+USDT: 3772.47
+
+[2025-06-14 21:43:39] ⏰ Offset de tempo ajustado: 0.187 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43019156
+USDT: 3772.47
+
+[2025-06-14 21:43:39] ⏰ Offset de tempo ajustado: 0.187 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43019156
+USDT: 3772.47
+
+[2025-06-14 21:54:56] ⏰ Offset de tempo ajustado: 0.197 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43019156
+USDT: 3772.47
+
+[2025-06-14 21:55:34] ⏰ Offset de tempo ajustado: 0.197 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.33487756
+USDT: 13762.36
+
+[2025-06-14 21:55:34] 🔓 Saindo da pausa - saldo suficiente detectado (Gatilho 2)
+💰 Saldo atual: 13762.36 USDT >= 5304.51 USDT necessários
+🔍 Convertendo 5304.51 USDT para 0.050725 BTC a 104574 USDT/BTC
+[2025-06-14 21:55:34] ✅ Ordem Buy enviada! ID: 1972746716646214912 | Qty: 0.050725 | Price: 104574
+[2025-06-14 21:55:34] ✅ Recompra pendente executada! ID: 1972746716646214912
+123 [2025-06-15 01:33:52] ✅ Ordem 1972746716646214912 preenchida
+[2025-06-15 01:33:52] 🔄 Recompra 1972746716646214912 preenchida no ciclo #1!
+[2025-06-15 01:33:52] ✅ Ordem 1972740695253060864 cancelada com sucesso!
+
+[2025-06-15 01:33:52] 🔍 Resposta da API para ordem 1972746716646214912 (tentativa 1):
+📉 Nova queda necessária para recompra: 0.25% (min: 0.10%, max: 1.00%)
+
+📈 Iniciando o processo da ordem de venda após recompra...
+
+
+📊 Resumo das compras no ciclo #1:
+   Compra 1: 0.047574 BTC (Taxa: 0.000048 BTC) a 105099.90 USDT (Taxa: 4.99 USDT, Valor: 4999.99 USDT)
+   Compra 2: 0.049124 BTC (Taxa: 0.000049 BTC) a 104837.00 USDT (Taxa: 5.15 USDT, Valor: 5150.01 USDT)
+   Compra 3: 0.050725 BTC (Taxa: 0.000051 BTC) a 104574.00 USDT (Taxa: 5.30 USDT, Valor: 5304.51 USDT)
+   Total: 0.147275 BTC, 15469.98 USDT (incluindo taxas)
+   Taxa total: 15.45 USDT
+📊 Preço médio do ciclo #1: 105041.22 USDT/BTC
+🎯 Lucro alvo ajustado para o próximo ciclo: 0.47% (Min: 0.20%, Max: 2.00%)
+
+💰 Taxa de venda estimada: 15.56 USDT
+💰 Preço de venda calculado: 105641.03 USDT/BTC (Preço médio: 105041.22 + Lucro Alvo: 0.47%)
+
+📈 Calculando ordem de venda limite: Quantidade: 0.147275 BTC, Preço: 105641 USDT/BTC, Valor: 15558.28 USDT
+[2025-06-15 01:33:52] ✅ Ordem Sell enviada! ID: 1972856596749094144 | Qty: 0.147275 | Price: 105641
+[2025-06-15 01:33:52] ⏳ Aguardando 2 segundos para processar a ordem de venda...
+
+🔄 Iniciando o processo da ordem de recompra após recompra...
+
+🔄 Calculando qty para recompra: base 5000.00 USDT, calculado 5463.65 USDT, final 5463.65 USDT (min: 500.0, max: 6000.0)
+[2025-06-15 01:33:54] ⏰ Offset de tempo ajustado: 0.409 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.38555183
+USDT: 8457.85
+
+🔍 Convertendo 5463.65 USDT para 0.052378 BTC a 104312 USDT/BTC
+[2025-06-15 01:33:55] ✅ Ordem Buy enviada! ID: 1972856616328105216 | Qty: 0.052378 | Price: 104312
+[2025-06-15 01:33:55] ⏳ Aguardando 2 segundos para processar a ordem de recompra...
+
+[2025-06-15 01:33:57] ⏰ Offset de tempo ajustado: 0.409 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.38555183
+USDT: 8457.85
+
+🔄 Continuando monitoramento do ciclo #1...
+
+DEBUG: self.rebuys_max = 20, rebuy_count = 2
+
+[2025-06-15 05:10:18] ✅ Ordem 1972856616328105216 preenchida
+[2025-06-15 05:10:18] 🔄 Recompra 1972856616328105216 preenchida no ciclo #1!
+[2025-06-15 05:10:19] ✅ Ordem 1972856596749094144 cancelada com sucesso!
+
+[2025-06-15 05:10:19] 🔍 Resposta da API para ordem 1972856616328105216 (tentativa 1):
+📉 Nova queda necessária para recompra: 0.25% (min: 0.10%, max: 1.00%)
+
+📈 Iniciando o processo da ordem de venda após recompra...
+
+
+📊 Resumo das compras no ciclo #1:
+   Compra 1: 0.047574 BTC (Taxa: 0.000048 BTC) a 105099.90 USDT (Taxa: 4.99 USDT, Valor: 4999.99 USDT)
+   Compra 2: 0.049124 BTC (Taxa: 0.000049 BTC) a 104837.00 USDT (Taxa: 5.15 USDT, Valor: 5150.01 USDT)
+   Compra 3: 0.050725 BTC (Taxa: 0.000051 BTC) a 104574.00 USDT (Taxa: 5.30 USDT, Valor: 5304.51 USDT)
+   Compra 4: 0.052378 BTC (Taxa: 0.000052 BTC) a 104312.00 USDT (Taxa: 5.46 USDT, Valor: 5463.65 USDT)
+   Total: 0.199601 BTC, 20939.10 USDT (incluindo taxas)
+   Taxa total: 20.92 USDT
+📊 Preço médio do ciclo #1: 104904.80 USDT/BTC
+🎯 Lucro alvo ajustado para o próximo ciclo: 0.46% (Min: 0.20%, Max: 2.00%)
+
+💰 Taxa de venda estimada: 21.06 USDT
+💰 Preço de venda calculado: 105489.01 USDT/BTC (Preço médio: 104904.80 + Lucro Alvo: 0.46%)
+
+📈 Calculando ordem de venda limite: Quantidade: 0.199601 BTC, Preço: 105489 USDT/BTC, Valor: 21055.71 USDT
+[2025-06-15 05:10:19] ✅ Ordem Sell enviada! ID: 1972965532621868288 | Qty: 0.199601 | Price: 105489
+[2025-06-15 05:10:19] ⏳ Aguardando 2 segundos para processar a ordem de venda...
+
+🔄 Iniciando o processo da ordem de recompra após recompra...
+
+🔄 Calculando qty para recompra: base 5000.00 USDT, calculado 5627.56 USDT, final 5627.56 USDT (min: 500.0, max: 6000.0)
+[2025-06-15 05:10:21] ⏰ Offset de tempo ajustado: 0.141 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43787745
+USDT: 2994.19
+
+🔄 Saldo insuficiente para recompra (2994.19 < 5627.56 USDT). Pausando ciclo e aguardando gatilhos...
+[2025-06-15 05:10:21] ⏰ Offset de tempo ajustado: 0.142 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43787745
+USDT: 2994.19
+
+🔄 Continuando monitoramento do ciclo #1...
+
+DEBUG: self.rebuys_max = 20, rebuy_count = 3
+
+[2025-06-15 05:10:22] ⏰ Offset de tempo ajustado: 0.142 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43787745
+USDT: 2994.19
+
+[2025-06-15 05:10:22] ⏰ Offset de tempo ajustado: 0.142 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43787745
+USDT: 2994.19
+
+[2025-06-15 05:10:23] ⏰ Offset de tempo ajustado: 0.142 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.43787745
+USDT: 2994.19
+
+[2025-06-15 07:04:19] 🎉 Venda 1972965532621868288 preenchida! Finalizando ciclo #1...
+
+[2025-06-15 07:04:20] ❌ Falha ao cancelar ordem 1972856616328105216: Order does not exist.
+[2025-06-15 07:04:20] 🔍 Resposta da API para ordem 1972965532621868288 (tentativa 1):
+[2025-06-15 07:04:20] 📊 Calculando lucro: Investido 20939.10 USDT, Recebido 21034.65 USDT, BTC vendido 0.199601
+[2025-06-15 07:04:20] 💵 Lucro do ciclo #1: 95.55 USDT
+[2025-06-15 07:04:20] 💵 Lucro total acumulado: 95.55 USDT
+
+[2025-06-15 07:04:20] 📈 Lucro de 95.55 USDT distribuído em 2 ordens: 47.78 USDT por ordem
+[2025-06-15 07:04:20] 🔓 Saindo da pausa - venda preenchida (Gatilho 1)
+[2025-06-15 07:04:20] 🔄 Preparando para iniciar novo ciclo...
+[2025-06-15 07:04:20] ⏰ Offset de tempo ajustado: 0.220 segundos
+
+
+💰 Saldos Atuais:
+BTC: 1.23827645
+USDT: 24028.85
+
+[2025-06-15 07:04:20] 🔄 Iniciando novo ciclo principal #2
+
+[2025-06-15 07:04:20] 🛒 Iniciando o processo da ordem de compra inicial...
+
+💸 Adicionando 47.78 USDT de lucro reinvestido. Ordens restantes: 1
+🔄 Calculando qty para compra inicial: base 5000.00 USDT, calculado 5047.78 USDT, final 5047.77 USDT (min: 500.0, max: 6000.0)
+🛒 Enviando ordem de compra a mercado. Quantidade: 5047.77 USDT
+
+[2025-06-15 07:04:20] ✅ Ordem Buy enviada! ID: 1973022923417718016 | Qty: 5047.77 | Price: Mercado
+[2025-06-15 07:04:20] ⏳ Aguardando 8 segundos para processar a compra inicial...
+
+[2025-06-15 07:04:28] 🔍 Resposta da API para ordem 1973022923417718016 (tentativa 1):
+[2025-06-15 07:04:28] 📊 Compra inicial do ciclo #2 a 105495.00 USDT/BTC, Qty: 0.047848 BTC
+
+[2025-06-15 07:04:28] 📈 Iniciando o processo da ordem de venda...
+
+📈 Calculando ordem de venda limite: Quantidade: 0.047848 BTC, Preço: 106128 USDT/BTC, Valor: 5078.01 USDT
+[2025-06-15 07:04:28] ✅ Ordem Sell enviada! ID: 1973022991969422592 | Qty: 0.047848 | Price: 106128
+[2025-06-15 07:04:28] ⏳ Aguardando 2 segundos para processar a ordem de venda...
+
+[2025-06-15 07:04:30] 🔄 Iniciando o processo da ordem de recompra...
+
+💸 Adicionando 47.78 USDT de lucro reinvestido. Ordens restantes: 0
+🔄 Calculando qty para recompra: base 5000.00 USDT, calculado 5246.98 USDT, final 5246.97 USDT (min: 500.0, max: 6000.0)
+🔍 Convertendo 5246.97 USDT para 0.049861 BTC a 105231 USDT/BTC
+[2025-06-15 07:04:31] ✅ Ordem Buy enviada! ID: 1973023009451281664 | Qty: 0.049861 | Price: 105231
+[2025-06-15 07:04:31] ⏳ Aguardando 2 segundos para processar a ordem de recompra...
+
+[2025-06-15 07:04:33] 🔍 Monitoring cycle #2 with 1 buys...
+[2025-06-15 09:30:12] 🔌 WebSocket connection closed. Attempting to reconnect...
+[2025-06-15 09:30:12] ⚡ Connecting to WebSocket: wss://stream-demo.bybit.com/v5/private
+🔑 WebSocket authentication successful.
+📡 WebSocket subscription successful.
+🛑 KeepAlive WebSocket encerrado.
+🫀 Iniciando KeepAlive WebSocket...
+💰 Subscrito ao wallet stream para manter conexão ativa
