@@ -29,8 +29,12 @@ Executar ciclos automáticos de trade com foco em recompra estratégica e lucro 
 * Recalcula preço médio.
 * Atualiza ordem de venda com novo lucro e quantidade, sobre o preço médio.
 * Cria nova recompra com base no preço da última compra.
-
+* Cancela a venda anterior.
+* Recalcula preço médio.
+* Atualiza ordem de venda com novo lucro e quantidade, sobre o preço médio.
 Esse ciclo se repete até atingir as limitações explícitas nas configurações ou a venda ser executada.
+
+### 🔵 Se saldo terminar, o bot aguardará (pause) até detectar a entrada de mais saldo na conta ou até a ordem de venda ser preenchida.
 
 ---
 
