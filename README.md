@@ -10,7 +10,7 @@ Executar ciclos automáticos de trade com foco em recompra estratégica e lucro 
 
 ---
 
-## ⚙️ Funcionamento da Estratégia
+## ⚙️ Funcionamento da Estratégia Rebuy
 
 ### 🔁 Ciclo Operacional
 
@@ -27,10 +27,10 @@ Executar ciclos automáticos de trade com foco em recompra estratégica e lucro 
 
 * Cancela a venda anterior.
 * Recalcula preço médio.
-* Atualiza ordem de venda com novo lucro sobre o preço médio.
-* Cria nova recompra abaixo da última.
+* Atualiza ordem de venda com novo lucro e quantidade, sobre o preço médio.
+* Cria nova recompra com base no preço da última compra.
 
-Esse ciclo se repete até atingir o número máximo de recompras ou a venda ser executada.
+Esse ciclo se repete até atingir as limitações explícitas nas configurações ou a venda ser executada.
 
 ---
 
