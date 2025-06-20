@@ -72,8 +72,10 @@ Esse ciclo se repete até atingir o número máximo de recompras ou a venda ser 
 
 ### 🔹 Bloco: Recompras
 
-* Diferença percentual entre compras (queda)
-* Múltiplos de variação da queda
+* Diferença percentual entre os preços de compras (queda)
+* Rebuy %: inicial
+* Rebuy Minimo e Máximo %:
+* Multiplicador da variação da queda
 * Número máximo de recompras
 
 ### 🔹 Bloco: Taxas
@@ -146,5 +148,5 @@ Este projeto está em fase de reestruturação. Se você domina Python, mercados
 
 ---
 
-> Desenvolvido por [Macanada](https://github.com/Macanada) — projeto pessoal com foco em automação inteligente, segurança e experimentação estratégica.
+> Desenvolvido por [Sindak](https://github.com/Macanada) — projeto pessoal com foco em automação inteligente, segurança e experimentação estratégica.
 
